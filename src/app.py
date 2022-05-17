@@ -1,20 +1,18 @@
 
 
-def verificaParouImpar(x):
-    if x % 2 == 0:
-        return 'Número par'
+def verificaParouImpar(valor):
+    if valor % 2 == 0:
+        retorno = 'Número par'
     else:
-        return 'Número ímpar'
-
+        retorno = 'Número ímpar'
+    return retorno
 if __name__ == "__main__":
-
-    while True:
+    continuar = 'S'
+    while continuar == 'S':
         try:
             valor = int(input('Digite um valor:'))
             print(verificaParouImpar(valor))
-            y = input('Deseja continuar? (S|N): ').upper()
-            if y == 'N':
-                break
+            continuar = input('Deseja continuar? (S|N): ').upper()
         except:
             print('Digite apenas números')
 
