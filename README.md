@@ -1,6 +1,6 @@
 # Method Replace Inline Code with Function Call
 
-🎓 College: [Faculdade Metodista Granbery](http://granbery.edu.br/)
+🎓 College: [College Methodist Granbery](http://granbery.edu.br/)
 
 👨‍🏫 Teacher: [Marco Antônio - Github](https://github.com/marcoaparaujo) | [Linkedin](https://www.linkedin.com/in/marco-ant%C3%B4nio-ara%C3%BAjo/)
 
@@ -9,54 +9,54 @@
 > FOWLER, Martin. “Replace Inline Code WIth Function Call” no código. *In*: REFATORAÇÃO: Aperfeiçoando o design de códigos existentes. 2. ed. [*S. l.*: *s. n.*], 2019. cap. 8.
 > 
 
-## Método
+## Method
 
-O método substituir código internalizado por chamada de função ( **Replace Inline Code with Function Call**), demostra as funções como melhorias de códigos. Com o decorrer do desenvolvimento do software, acabamos criando códigos repetidos que trazem o mesmo resultado. Talvez nem prejudique o software, mas com as manutenções no decorrer do tempo do software pode ocorrer pode trazer dificuldades para alterar tantos códigos repetidos do mesmo resultado. Esse método melhora o código tendo que criar uma função, essa função vai se transformar em apenas um código para que não necessite ficar repetindo várias vezes. Como Martin Fowler fala no livro, iremos empacotar o código para dentro dessa função. Nos locais que possui o Código repetido vamos apenas chamar a função.  
+The method replace internalized code with function call ( **Replace Inline Code with Function Call**), demonstrates functions as code improvements. As the software develops, we end up creating repeated codes that bring the same result. It may not even harm the software, but maintenance over time can cause difficulties in changing so many codes that produce the same result. This method improves the code by having to create a function, this function will become just one code so that it does not need to be repeated several times. As Martin Fowler says in the book, we will package the code into this function. In places where the Code is repeated, we will just call the function.
 
-## Código
+## Code
 
-O código que estou usando para exemplo, é um código do meu repositório. Que tem objetivo de verificar o valor de entrada e retorna se é impar ou par. [CODE](https://github.com/DevEddi/project_even_or_odd_python)
+The code I am using for example is code from my repository. Which aims to check the input value and returns whether it is odd or even. [CODE](https://github.com/DevEddi/project_even_or_odd_python)
 
-## Procedimento
+## Procedure
 
-- Substitua o código internalizado por uma chamada á função existente.
-- Teste
+- Replace the internalized code with an existing function call.
+- Test
 
-## Ferramenta para teste
+## Test tool
 
 ### PyTest
 
 ```bash
-    pip install ipytest
+     pip install ipytest
 ```
 
-## Objetivo da atividade
+## Objective of the activity
 
-1. Elabore ou escolha um código que a refatoração possa ser aplicada.
-2. Identifique o mau cheiro associado.
-3. Escreva os casos de teste e execute
-4. Aplique a refatoração
-5. Execute os casos de teste novamente
-6. Documente cada etapa para a apresentação
+1. Design or choose a code that refactoring can be applied to.
+2. Identify the associated bad smell.
+3. Write the test cases and execute
+4. Apply refactoring
+5. Run the test cases again
+6. Document each step for the presentation
 
-## Mau Cheiro
+## Bad smell
 
-### Código Duplicado
+### Duplicate Code
 
-O mau cheiro que encontrei dentro do código abaixo foi o código duplicado, nós como desenvolvedores acabamos criando repetições de códigos sem a necessidade. Podendo prejudicar o código para manutenções, exigindo tempo para procurar a expressão que está repetida. 
+The bad smell I found within the code below was duplicated code, as developers we ended up creating unnecessary code repetitions. This could harm the code for maintenance, requiring time to search for the repeated expression.
 
-## Código antigo
+## Old code
 
-Você pode visualizar como existe a repetição.
+You can visualize how there is repetition.
 
 ![Untitled](images/demostra_codigo.png)
 
-## Código novo aplicando a refatoração
+## New code applying refactoring
 
-Agora observe a criação da função  sendo utilizada para chamar  a lógica apenas uma vez.
+Now observe the creation of the function being used to call the logic just once.
 
 ![Untitled](images/chamada_de_função.png)
 
-## Realização dos Testes
+## Testing
 
 ![testes.png](images/testes.png)
